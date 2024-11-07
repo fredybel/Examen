@@ -6,24 +6,30 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    internal class Asignatura
+    //CLASE HIJA
+    public class Asignatura : Alumno, IAsignatura//HERENCIA
     {
-    }
+        public int N1 { get; set; }
+        public int N2 { get; set; }
+        public string N3 { get; set; }
+        public string NombreAsignatura { get; set; }
+        public string Horario { get; set; }
+        public string NombreDocente { get; set; }
 
-namespace Examen
-{
-        //CLASE HIJA
-        public class Asignatura : Alumno, IAsignatura//HERENCIA
+
+        public double CalcularNotaFinal()
         {
-            public int N1 { get; set; }
-            public int N2 { get; set; }
-            public string N3 { get; set; }
-            public string NombreAsignatura { get; set; }
-            public string Horario { get; set; }
-            public string NombreDocente { get; set; }
+            throw new NotImplementedException();
+        }
 
+        public void Imprimir()
+        {
+            throw new NotImplementedException();
+        }
 
-            public double CalcularNotaFinal()
-            {
-                throw new NotImplementedException();
-            }
+        public string MensajeNotaFinal(double NotaFinal)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

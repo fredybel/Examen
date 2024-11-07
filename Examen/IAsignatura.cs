@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    internal interface IAsignatura
+    public interface IAsignatura
     {
+        public double CalcularNotaFinal();
+        
+        public string MensajeNotaFinal(double NotaFinal);
+        public void Imprimir();
     }
+
 }
