@@ -24,8 +24,17 @@ namespace Examen
 
         public void Imprimir()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("***********************************************");
+            Console.WriteLine($"Nombre del estudiante: {NombreAlumno}");
+            Console.WriteLine($"Número de la cuenta: {NumeroCuenta}");
+            Console.WriteLine($"correo electrónico: {Email}");
+            Console.WriteLine($"Nombre de la clase:: {NombreAsignatura}");
+            Console.WriteLine($"Horario: {Horario}");
+            Console.WriteLine($"Nombre del docente: {NombreDocente}");
+
         }
+
 
         public string MensajeNotaFinal(double NotaFinal)
         {
