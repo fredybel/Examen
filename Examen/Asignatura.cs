@@ -32,18 +32,38 @@ namespace Examen
 
         public string MensajeNotaFinal(double NotaFinal)
         {
-               
-                if (NotaFinal < 60)
-                    return "Reprobado";
-                if (NotaFinal < 80)
-                    return "Bueno";
-                if (NotaFinal < 90)
-                    return "Muy Bueno";
+
+
+            if (NotaFinal < 60)
+                return "Reprobado";
+
+
+
+            if (NotaFinal < 60)
+                return "Reprobado";
+            else if (NotaFinal < 80)
+                return "Bueno";
+            else if (NotaFinal < 90)
+                return "Muy Bueno";
+            else
                 return "Sobresaliente";
-            
+
         }
+        
+
+        
         public void Imprimir()
         {
+            if (N1 < 0 || N1 > 30 || N2 < 0 || N2 > 30)
+            {
+                Console.WriteLine("La nota del primer o segundo parcial sobrepasa del 30%");
+                
+            }
+            if (N3 < 0 || N3 > 40)
+            {
+                Console.WriteLine("La nota del primer o segundo parcial sobrepasa del 40%");
+            }
+
             double NotaFinal = CalcularNotaFinal();
             Console.WriteLine();
             Console.WriteLine("***********************************************");
@@ -53,13 +73,12 @@ namespace Examen
             Console.WriteLine($"Nombre de la clase:: {NombreAsignatura}");
             Console.WriteLine($"Horario: {Horario}");
             Console.WriteLine($"Nombre del docente: {NombreDocente}");
-            Console.WriteLine($"Nota Final:: {CalcularNotaFinal()}");
-            Console.WriteLine($"Nombre del docente: {NombreDocente}");
-            Console.WriteLine($"Nota Final:: {NotaFinal}-{MensajeNotaFinal(NotaFinal)}");
+            Console.WriteLine($"Nota Final:: {CalcularNotaFinal()}-{MensajeNotaFinal(NotaFinal)}");
+            Console.WriteLine($"Nota Final:: {CalcularNotaFinal(N1, N2, N3)}-{MensajeNotaFinal(NotaFinal)}");
+            Console.WriteLine("***********************************************");
 
-            
+
+
         }
-
-       
     }
 }
