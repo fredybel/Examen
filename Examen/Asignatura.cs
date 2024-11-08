@@ -56,12 +56,18 @@ namespace Examen
         {
             if (N1 < 0 || N1 > 30 || N2 < 0 || N2 > 30)
             {
-                Console.WriteLine("La nota del primer o segundo parcial sobrepasa del 30%");
+                Console.WriteLine("******************************************************");
+                Console.WriteLine("*********************Advertencia**********************");
+                
+                Console.WriteLine("    La nota del primer o segundo parcial sobrepasa del 30%");
                 
             }
             if (N3 < 0 || N3 > 40)
             {
-                Console.WriteLine("La nota del primer o segundo parcial sobrepasa del 40%");
+
+                Console.WriteLine("******************************************************");
+                Console.WriteLine("*********************Advertencia**********************");
+                Console.WriteLine("     La nota del tercer parcial sobrepasa del 40%");
             }
 
             double NotaFinal = CalcularNotaFinal();

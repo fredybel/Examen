@@ -1,6 +1,7 @@
 ﻿using Examen;
-
-Asignatura asignatura = new Asignatura();
+try
+{
+    Asignatura asignatura = new Asignatura();
 
 
     //Impresion Atributos (clase Alumno)
@@ -31,4 +32,13 @@ Asignatura asignatura = new Asignatura();
     asignatura.N3 = Convert.ToInt32(Console.ReadLine());
     //Impresion metodo
     asignatura.Imprimir();
-    asignatura.CalcularNotaFinal();
+
+
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+
+
